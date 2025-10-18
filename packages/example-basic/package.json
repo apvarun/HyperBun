@@ -1,0 +1,21 @@
+{
+  "name": "@hyperbun/example-basic",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "bun run --hot src/server.ts",
+    "start": "bun run src/server.ts",
+    "build": "bun run build:assets && bun run build:server",
+    "build:assets": "bun run scripts/build-assets.ts",
+    "build:server": "bun build src/server.ts --target bun --outdir dist --minify --packages external"
+  },
+  "dependencies": {
+    "@hyperbun/core": "workspace:*",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.2",
+    "@types/react-dom": "^18.3.1"
+  }
+}

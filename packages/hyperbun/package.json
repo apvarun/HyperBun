@@ -1,0 +1,73 @@
+{
+  "name": "@hyperbun/core",
+  "version": "0.1.0",
+  "description": "Lightweight HTTP routing and JSX helpers built for Bun's native server.",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": false,
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./src/index.ts",
+  "keywords": [
+    "bun",
+    "http",
+    "server",
+    "routing",
+    "jsx"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/apvarun/HyperBun.git"
+  },
+  "bugs": {
+    "url": "https://github.com/apvarun/HyperBun/issues"
+  },
+  "homepage": "https://github.com/apvarun/HyperBun#readme",
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./jsx": {
+      "types": "./src/jsx.tsx",
+      "import": "./dist/jsx.js",
+      "default": "./dist/jsx.js"
+    }
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "bun": ">=1.2.3"
+  },
+  "scripts": {
+    "clean": "rimraf dist",
+    "prebuild": "rimraf dist",
+    "build": "bun build ./src/index.ts ./src/jsx.tsx --no-minify --target bun --outdir ./dist --external react --external react-dom --external react-dom/client --external react-dom/server --external react/jsx-runtime --external react/jsx-dev-runtime",
+    "prepublishOnly": "bun run build",
+    "prepare": "bun run build"
+  },
+  "peerDependencies": {
+    "bun": ">=1.2.3",
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    },
+    "react-dom": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.5",
+    "@types/react-dom": "^18.3.3",
+    "rimraf": "^5.0.5"
+  }
+}
