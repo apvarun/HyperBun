@@ -1,0 +1,37 @@
+{
+  "name": "create-hyperbun",
+  "version": "0.1.0",
+  "description": "Scaffold a new HyperBun project with a single command.",
+  "type": "module",
+  "bin": {
+    "create-hyperbun": "./bin/index.js"
+  },
+  "files": [
+    "bin",
+    "template",
+    "README.md"
+  ],
+  "keywords": [
+    "hyperbun",
+    "bun",
+    "scaffold",
+    "create-hyperbun",
+    "cli"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/apvarun/HyperBun.git",
+    "directory": "packages/create-hyperbun"
+  },
+  "homepage": "https://github.com/apvarun/HyperBun/tree/main/packages/create-hyperbun",
+  "bugs": {
+    "url": "https://github.com/apvarun/HyperBun/issues"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

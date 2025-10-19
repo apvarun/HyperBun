@@ -19,6 +19,15 @@ bun add @hyperbun/core
 
 > Peer dependencies: Bun ≥ 1.2.3. React/ReactDOM stay optional unless you use the JSX runtime.
 
+## Scaffold a Project with HyperBun
+```bash
+npm create hyperbun@latest my-app
+# or
+bun create hyperbun my-app
+```
+
+The CLI lives in `packages/create-hyperbun` and boots a project similar to `packages/example-basic`.
+
 ### Requirements
 - Bun runtime `>= 1.2.3` (required for `Bun.serve`, `Bun.build`, and TypeScript transpilation).
 - TypeScript `^5` if you rely on type checking or emit declarations during CI.
@@ -126,6 +135,7 @@ Spin up `packages/example-basic` for a full working reference.
 ## Working in This Repo
 - `packages/hyperbun` (this package) contains the source; the published build lives in `dist/`.
 - `packages/example-basic` showcases the routing and JSX runtime together.
+- `packages/create-hyperbun` ships the `npm create hyperbun` scaffolding CLI and starter template.
 - Shared tooling (TypeScript configs, linting, bun workspace setup) lives at the repository root to keep package-level configs minimal.
 
 ### Install & Develop
