@@ -1,5 +1,11 @@
 # HyperBun
 
+[![npm version](https://img.shields.io/npm/v/@hyperbun/core.svg)](https://www.npmjs.com/package/@hyperbun/core)
+[![npm downloads](https://img.shields.io/npm/dw/@hyperbun/core.svg)](https://www.npmjs.com/package/@hyperbun/core)
+[![bundle size](https://img.shields.io/bundlephobia/minzip/@hyperbun/core)](https://bundlephobia.com/package/@hyperbun/core)
+[![bun support](https://img.shields.io/badge/bun-%3E%3D1.3.0-000?logo=bun)](https://bun.sh)
+[![license](https://img.shields.io/github/license/apvarun/HyperBun.svg)](LICENSE)
+
 _Bun-native HTTP primitives with optional React hydration and zero-framework lock-in._
 
 HyperBun wraps [`Bun.serve`](https://bun.com/docs/api/http) with a tiny routing layer, static file helpers, and JSX tooling so you can compose your own stack instead of adopting a monolithic framework.
@@ -17,7 +23,7 @@ HyperBun wraps [`Bun.serve`](https://bun.com/docs/api/http) with a tiny routing 
 bun add @hyperbun/core
 ```
 
-> Peer dependencies: Bun ≥ 1.2.3. React/ReactDOM stay optional unless you use the JSX runtime.
+> Peer dependencies: Bun ≥ 1.3.0. React/ReactDOM stay optional unless you use the JSX runtime.
 
 ## Scaffold a Project with HyperBun
 ```bash
@@ -29,7 +35,7 @@ bun create hyperbun my-app
 The CLI lives in `packages/create-hyperbun` and boots a project similar to `packages/example-basic`.
 
 ### Requirements
-- Bun runtime `>= 1.2.3` (required for `Bun.serve`, `Bun.build`, and TypeScript transpilation).
+- Bun runtime `>= 1.3.0` (required for `Bun.serve`, `Bun.build`, and TypeScript transpilation).
 - TypeScript `^5` if you rely on type checking or emit declarations during CI.
 - React and ReactDOM `>= 18` only when using `@hyperbun/core/jsx`.
 
