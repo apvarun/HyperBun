@@ -1,5 +1,5 @@
-import type { HyperBunLayoutProps } from "@hyperbun/core/jsx";
-import { HyperBunHydrationScripts } from "@hyperbun/core/jsx";
+import type { HyperBunLayoutProps } from "@hyperbun/core";
+import { HyperBunHydrationScripts } from "@hyperbun/core";
 
 const Layout = ({
   title,

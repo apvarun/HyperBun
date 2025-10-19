@@ -8,7 +8,7 @@ import readline from "node:readline/promises";
 import { spawn } from "node:child_process";
 
 const DEFAULT_TEMPLATE = "default";
-const DEFAULT_HYPERBUN_VERSION = "^0.1.0";
+const DEFAULT_HYPERBUN_VERSION = "^0.1.1";
 const BINARY_EXTENSIONS = new Set([".png", ".jpg", ".jpeg", ".gif", ".webp", ".ico", ".svg", ".woff", ".woff2"]);
 
 const __filename = fileURLToPath(import.meta.url);

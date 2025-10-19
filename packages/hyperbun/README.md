@@ -37,7 +37,7 @@ The CLI lives in `packages/create-hyperbun` and boots a project similar to `pack
 ### Requirements
 - Bun runtime `>= 1.3.0` (required for `Bun.serve`, `Bun.build`, and TypeScript transpilation).
 - TypeScript `^5` if you rely on type checking or emit declarations during CI.
-- React and ReactDOM `>= 18` only when using `@hyperbun/core/jsx`.
+- React and ReactDOM `>= 18` only when you opt into the JSX runtime APIs.
 
 ## Quick Taste
 ```ts
@@ -100,7 +100,7 @@ createServer({
 
 ## React / JSX Runtime
 ```ts
-import { createJSXServer } from "@hyperbun/core/jsx";
+import { createJSXServer } from "@hyperbun/core";
 import { json } from "@hyperbun/core";
 
 await createJSXServer({

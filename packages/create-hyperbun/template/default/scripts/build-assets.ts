@@ -1,5 +1,5 @@
 import path from "node:path";
-import { buildJSXStaticAssets } from "@hyperbun/core/jsx";
+import { buildJSXStaticAssets } from "@hyperbun/core";
 
 import { createAppJSXOptions } from "../src/server";
 

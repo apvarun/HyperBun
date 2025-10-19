@@ -1,6 +1,6 @@
 {
   "name": "@hyperbun/core",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Lightweight HTTP routing and JSX helpers built for Bun's native server.",
   "license": "MIT",
   "type": "module",
@@ -28,11 +28,6 @@
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js",
       "default": "./dist/index.js"
-    },
-    "./jsx": {
-      "types": "./dist/jsx.d.ts",
-      "import": "./dist/jsx.js",
-      "default": "./dist/jsx.js"
     }
   },
   "files": [
@@ -47,7 +42,7 @@
   "scripts": {
     "clean": "rimraf dist",
     "prebuild": "rimraf dist",
-    "build": "bun build ./src/index.ts ./src/jsx.tsx --no-minify --target bun --outdir ./dist --external react --external react-dom --external react-dom/client --external react-dom/server --external react/jsx-runtime --external react/jsx-dev-runtime && tsc --project ./tsconfig.build.json",
+    "build": "bun build ./src/index.ts --minify --target bun --outdir ./dist --external react --external react-dom --external react-dom/client --external react-dom/server --external react/jsx-runtime --external react/jsx-dev-runtime --external bun-plugin-tailwind && tsc --project ./tsconfig.build.json",
     "prepublishOnly": "bun run build",
     "prepare": "bun run build"
   },

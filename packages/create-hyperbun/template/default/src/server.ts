@@ -1,5 +1,5 @@
 import { json } from "@hyperbun/core";
-import { createJSXServer, resolveJSXRuntimeEnvironment, type JSXServerOptions } from "@hyperbun/core/jsx";
+import { createJSXServer, resolveJSXRuntimeEnvironment, type JSXServerOptions } from "@hyperbun/core";
 
 const APP_NAME = "__APP_TITLE__";
 const PUBLIC_PREFIX = "/public" as const;
